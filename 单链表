@@ -71,30 +71,30 @@ return p->data;
 }
 
 node* Find(LinkList *l, dataType x) {
-           node *p = l->next;
-              while (p && p->data!=x)
-                                p = p->next;
-                 return p;
+node *p = l->next;
+while (p && p->data!=x)
+p = p->next;
+return p;
 }
 
 void Print(LinkList *l) {
-           node *p = l->next;
-              while (p) {
-               printf("%d ", p->data);
-                                  p = p->next;
-                                     }
-                 printf("\n");
+node *p = l->next;
+while (p) {
+           printf("%d ", p->data);
+           p = p->next;
+          }
+printf("\n");
 }
 
 void ClearList(LinkList *l) {
-           node *p, *q;
-              p = l->next;
-                 while (p) {
-                               q = p;
-                               p = p->next;
-                               free(q);
-                                              }
-  l->next = NULL;
+node *p, *q;
+p = l->next;
+while (p) {
+            q = p;
+            p = p->next;
+            free(q);
+           }
+l->next = NULL;
 }
 
 int main() {
