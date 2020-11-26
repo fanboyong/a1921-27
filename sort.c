@@ -2,8 +2,8 @@
 #include<stdio.h>
 #define N 20
 
-//原排序
-void outA(int a[], int n){
+//输出排序
+void shuchu(int a[], int n){
 	for(int i=0;i< n;i++){
 		printf("  %d  ",a[i]);
 	}
@@ -97,7 +97,7 @@ void QuickSort(int a[], int n){
 	QSort(a, 0, n-1);
 }
 //输出
-void OutA(int a[], int n)
+int main(int a[], int n)
 {int i, num;
 	srand(time(0));                                                                      
 	for (i=0; i<N;i++)
