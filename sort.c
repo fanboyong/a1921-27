@@ -60,19 +60,39 @@ void select1(int a[], int n){
 	}
 }
 
-//快速排序
-void pquick(int a[], int m, int asize){
-        if(m<asize){
-	int i = m, j = asize-1, k;
-	k = a[i];
-	while(i<j){
-		while(i<j && a[j]>k){j--;}
-		if(i<j){a[i] = a[j];i++;}
-		while(i<j && a[i]<=k){i++;}
-		if(i<j){a[j] = a[i];j--;}
+//分区
+int Partition(int a[], int low, int high)
+{
+	int x = a[low];
+	while (low < high)
+	{
+		while (low<high && a[high]>=x) high--;
+		if (low <high)
+		{
+			a[low] = a[high];
+			low++;
+		}
+		while (low<high && a[low]<=x) low++;
+		if (low < high)
+		{
+			a[high] = a[low];
+			high--;
+		}
 	}
-	a[i] = k;
-	pquick(a, 0, i-1);
-	pquick(a, i+1, asize);
+	a[low] = x;
+	return low;
 }
+//将区间[low...high]的元素进行快排
+void QSort(int a[], int low, int high){
+	if(low < high){
+		int mid = Partition(a, low, high);
+		QSort(a, low, mid-1);
+		QSort(a, mid+1, high);
+
+	}
+}
+
+//快排
+void QuickSort(int a[], int n){
+	QSort(a, 0, n-1);
 }
