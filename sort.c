@@ -92,7 +92,7 @@ void QSort(int a[], int low, int high){
 	}
 }
 
-//快排
+//快速排序
 void QuickSort(int a[], int n){
 	QSort(a, 0, n-1);
 }
