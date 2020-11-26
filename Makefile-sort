@@ -1,0 +1,3 @@
+#second
+test:sort.c sorttest.c
+	gcc sort.c testsort.c -o test
