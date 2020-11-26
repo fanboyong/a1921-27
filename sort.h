@@ -3,10 +3,10 @@
 #include<stdio.h>
 #include<stdlib.h>
 
-void OutA(int a[],int asize);
-void Bubble(int a[],int asize);
+void outA(int a[],int asize);
+void bubble(int a[],int asize);
 void insert(int a[],int asize);
-void Select(int a[],int asize);
-void Quick(int a[],int asize);
+void select(int a[],int asize);
+void Qsort(int a[],int asize);
 
 #endif
