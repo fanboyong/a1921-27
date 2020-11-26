@@ -3,8 +3,8 @@
 #define N 20
 
 //原排序
-void outA(int a[], int asize){
-	for(int i=0;i<asize;i++){
+void outA(int a[], int n){
+	for(int i=0;i< n;i++){
 		printf("  %d  ",a[i]);
 	}
 	printf("。");
