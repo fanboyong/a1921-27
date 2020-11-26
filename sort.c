@@ -96,3 +96,79 @@ void QSort(int a[], int low, int high){
 void QuickSort(int a[], int n){
 	QSort(a, 0, n-1);
 }
+//输出
+void OutA(int a[], int n)
+{int i, num;
+	srand(time(0));                                                                      
+	for (i=0; i<N;i++)
+		a[i] = rand () %100;
+	printf("初始数据为：");
+
+	for (i = 0;i<N;i++)
+		printf("%d ",a[i]);
+	printf("\n");
+	num = N;
+	bubble(a, num);
+	printf("排序后数据：");
+	for (i = 0;i<N;i++)
+		printf("%d ",a[i]);
+	printf("%d ",N);
+	printf("\n");
+	return;
+}
+void Insert(int a[], int n )
+{
+	int  i;
+	srand(time(0));
+	for (i=0; i<N; i++)
+		a[i] = rand() % 100;
+	printf("初始数据为：");
+	for (i=0; i<N; i++)
+		printf("%d ",a[i]);
+	printf("\n");
+	insertSort(a, N);
+	printf("排序后数据：");
+	for (i=0; i<N; i++)
+		for (i=0; i<N; i++)
+			printf("%d ", a[i]);
+
+	printf("\n");
+	return ;
+}
+void Select(int a[], int n )
+{
+	int  i;
+	srand(time(0));
+	for (i=0; i<N; i++)
+		a[i] = rand() % 100;
+	printf("初始数据为：");
+	for (i=0; i<N; i++)
+		printf("%d ",a[i]);
+	printf("\n");
+	select1(a, N);
+	printf("排序后数据：");
+	for (i=0; i<N; i++)
+		printf("%d ", a[i]);
+
+	printf("\n");
+	return ;
+}
+void Quicksort(int a[], int n )
+{
+	int  i;
+	srand(time(0));
+	for (i=0; i<N; i++)
+		a[i] = rand() % 100;
+	printf("初始数据为：");
+	for (i=0; i<N; i++)
+		printf("%d ",a[i]);
+	printf("\n");                                                                          
+	QuickSort(a, N);
+	printf("排序后数据：");
+	for (i=0; i<N; i++)
+		printf("%d ", a[i]);
+
+	printf("\n");
+	return ;
+}
+
