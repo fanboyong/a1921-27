@@ -1,11 +1,14 @@
-all: listg.c sort.c stack.c
-testlistg:  listg.c testlistg.c
+all: listg sort stack queue
+testlistg:  listg.c testlistg.c 
 	gcc listg.c testlistg.c -o testlistg
-testsort:  sort.h sort.c testsort.c
+testsort:   sort.c testsort.c
         gcc sort.c testsort.c -o testsort
 teststack:  stack.c teststack.c
         gcc stack.c teststack.c -o teststack
+testqueue: queue.c testqueue.c
+        gcc queue.c testqueue.c -o testqueue
 clean:
         rm testlistg
 	rm testsort
 	rm teststack
+	rm testqueue
